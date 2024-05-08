@@ -14,4 +14,5 @@ Steps-
 3. Start app command "npm run Start"
  -->
  
+### `npm install`
 ### `npm start`
