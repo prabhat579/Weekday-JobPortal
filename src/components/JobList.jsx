@@ -185,14 +185,17 @@ const JobList = () => {
           onChange={handleLocationChange}
         />
       </div>
-
       <div className="cardList">
         {filterItems.map((res, index) => (
            <JobCard key={index} cardDetails={res}></JobCard>
         ))}
       </div>
 
-      <div>{noJobs && <div>No Jobs</div>}</div>
+      <div className="noDataContainer">{noJobs && 
+      <div>
+        <span>No Jobs available for this category at the moment</span>
+      </div>
+      }</div>
     </>
   );
 };

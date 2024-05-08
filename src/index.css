@@ -117,4 +117,10 @@ p {
   text-align: center;
 }
 
+.noDataContainer{
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  padding: 20px 0;
+}
 
