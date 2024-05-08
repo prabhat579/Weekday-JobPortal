@@ -21,10 +21,21 @@ p {
   gap: 20px;
 }
 
+.filter-options{
+   display: flex;
+   flex-direction: row;
+   padding-bottom: 10px;
+}
+
+.basic-multi-select{
+  margin: 5px;
+  min-width: 150px;
+}
+
 .card {
   background-color: whitesmoke;
   border-radius: 10px;
-  width: 300px;
+  width: 280px;
   padding: 20px;
 }
 
@@ -105,3 +116,5 @@ p {
   color: #4943da;
   text-align: center;
 }
+
+

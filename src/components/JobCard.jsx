@@ -1,4 +1,6 @@
-const JobCard = () => {
+const JobCard = (props) => {
+    const {cardDetails } = props
+    const { companyName, logoUrl, minExp, location, jobDetailsFromCompany, minJdSalary, maxJdSalary} = cardDetails
     return (
       <>
         <div className="card">
@@ -8,31 +10,26 @@ const JobCard = () => {
           <div className="compDetails">
             <div className="card-img">
               <img
-                src="https://storage.googleapis.com/weekday-assets/airtableAttachment_1713598322273_sjxlt.jpg"
-                alt=""
+                src={logoUrl}
+                alt="logo"
               />
             </div>
             <div>
               <div className="info-container">
-                <h3>Ema</h3>
+                <h3>{companyName}</h3>
                 <h2>Software Engineer</h2>
               </div>
-              <span className="cards-sub-text">Banglore</span>
+              <span className="cards-sub-text">{location}</span>
             </div>
           </div>
-          <span className="est-sal">Estimated Salary: ₹30 - 60 LPA ✅</span>
+          <span className="est-sal">Estimated Salary: ₹{minJdSalary} - {maxJdSalary} LPA ✅</span>
           <p className="about-Comp">About Company:</p>
           <div className="about">
             <span>
               <strong>About Us</strong>
             </span>
             <p>
-              Flex Wash is an operating system for the car wash industry. Our
-              solutions help owners manage their operations and grow revenue. Our
-              POS has a built-in CRM, allowing car washes to take advantage of
-              their customer transaction history in order to funnel customers into
-              subscriptions and higher margin wash packages.. Founder/Recruiter
-              profiles: Chirag Singh Toor
+              {jobDetailsFromCompany}
             </p>
           </div>
           <div className="viewJob">
@@ -40,7 +37,7 @@ const JobCard = () => {
           </div>
           <div className="info-container">
             <h3>Minimum Experience</h3>
-            <h2>4 years</h2>
+            <h2>{minExp} years</h2>
           </div>
         </div>
       </>
@@ -48,3 +45,4 @@ const JobCard = () => {
   };
   
   export default JobCard;
+  
